@@ -1,0 +1,55 @@
+# UART Top-Level Scoreboard Log
+# Format: STATUS | TX_DATA | RX_DATA | PARITY_ERR | DONE
+#--------------------------------------------------
+PASS | TX=0x72 | RX=0x72 | parity_err=0 | done=1
+PASS | TX=0xb2 | RX=0xb2 | parity_err=0 | done=1
+PASS | TX=0x10 | RX=0x10 | parity_err=0 | done=1
+PASS | TX=0x30 | RX=0x30 | parity_err=0 | done=1
+PASS | TX=0xb5 | RX=0xb5 | parity_err=0 | done=1
+PASS | TX=0xb6 | RX=0xb6 | parity_err=0 | done=1
+PASS | TX=0x14 | RX=0x14 | parity_err=0 | done=1
+PASS | TX=0xdf | RX=0xdf | parity_err=0 | done=1
+PASS | TX=0xbb | RX=0xbb | parity_err=0 | done=1
+PASS | TX=0xeb | RX=0xeb | parity_err=0 | done=1
+PASS | TX=0x41 | RX=0x41 | parity_err=0 | done=1
+PASS | TX=0x40 | RX=0x40 | parity_err=0 | done=1
+PASS | TX=0x8a | RX=0x8a | parity_err=0 | done=1
+PASS | TX=0x03 | RX=0x03 | parity_err=0 | done=1
+PASS | TX=0xfc | RX=0xfc | parity_err=0 | done=1
+PASS | TX=0x5d | RX=0x5d | parity_err=0 | done=1
+PASS | TX=0x1d | RX=0x1d | parity_err=0 | done=1
+PASS | TX=0x6a | RX=0x6a | parity_err=0 | done=1
+PASS | TX=0x16 | RX=0x16 | parity_err=0 | done=1
+PASS | TX=0x3f | RX=0x3f | parity_err=0 | done=1
+PASS | TX=0x23 | RX=0x23 | parity_err=0 | done=1
+PASS | TX=0xa8 | RX=0xa8 | parity_err=0 | done=1
+PASS | TX=0x90 | RX=0x90 | parity_err=0 | done=1
+PASS | TX=0x25 | RX=0x25 | parity_err=0 | done=1
+PASS | TX=0x82 | RX=0x82 | parity_err=0 | done=1
+PASS | TX=0x5b | RX=0x5b | parity_err=0 | done=1
+PASS | TX=0xf2 | RX=0xf2 | parity_err=0 | done=1
+PASS | TX=0x31 | RX=0x31 | parity_err=0 | done=1
+PASS | TX=0xcd | RX=0xcd | parity_err=0 | done=1
+PASS | TX=0x64 | RX=0x64 | parity_err=0 | done=1
+PASS | TX=0x2b | RX=0x2b | parity_err=0 | done=1
+PASS | TX=0xea | RX=0xea | parity_err=0 | done=1
+PASS | TX=0x91 | RX=0x91 | parity_err=0 | done=1
+PASS | TX=0xf6 | RX=0xf6 | parity_err=0 | done=1
+PASS | TX=0x96 | RX=0x96 | parity_err=0 | done=1
+PASS | TX=0x55 | RX=0x55 | parity_err=0 | done=1
+PASS | TX=0x76 | RX=0x76 | parity_err=0 | done=1
+PASS | TX=0xb8 | RX=0xb8 | parity_err=0 | done=1
+PASS | TX=0x14 | RX=0x14 | parity_err=0 | done=1
+PASS | TX=0x81 | RX=0x81 | parity_err=0 | done=1
+PASS | TX=0x77 | RX=0x77 | parity_err=0 | done=1
+PASS | TX=0xed | RX=0xed | parity_err=0 | done=1
+PASS | TX=0x82 | RX=0x82 | parity_err=0 | done=1
+PASS | TX=0xd9 | RX=0xd9 | parity_err=0 | done=1
+PASS | TX=0x14 | RX=0x14 | parity_err=0 | done=1
+PASS | TX=0x7d | RX=0x7d | parity_err=0 | done=1
+PASS | TX=0x8c | RX=0x8c | parity_err=0 | done=1
+PASS | TX=0x4b | RX=0x4b | parity_err=0 | done=1
+PASS | TX=0x7c | RX=0x7c | parity_err=0 | done=1
+PASS | TX=0x70 | RX=0x70 | parity_err=0 | done=1
+#--------------------------------------------------
+SUMMARY: PASS=50 FAIL=0 TOTAL=50

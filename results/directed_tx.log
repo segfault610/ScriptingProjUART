@@ -1,0 +1,30 @@
+Reading pref.tcl
+
+# 2020.1
+
+# vsim -c -do "run -all; quit -f" tb_uart_tx_directed 
+# Start time: 15:02:34 on Apr 15,2026
+# Loading sv_std.std
+# Loading work.tb_uart_tx_directed
+# Loading work.uart_tx
+# run -all
+# [PASS] TC1:  0xA5 | Sent=0xa5 Captured=0xa5 Parity=1
+# [PASS] TC2:  0x00 | Sent=0x00 Captured=0x00 Parity=1
+# [PASS] TC3:  0xFF | Sent=0xff Captured=0xff Parity=1
+# [PASS] TC4:  0x55 | Sent=0x55 Captured=0x55 Parity=1
+# [PASS] TC5:  0xAA | Sent=0xaa Captured=0xaa Parity=1
+# [PASS] TC6:  0x12 | Sent=0x12 Captured=0x12 Parity=1
+# [PASS] TC7:  0xDE | Sent=0xde Captured=0xde Parity=1
+# [PASS] TC8:  0x7F | Sent=0x7f Captured=0x7f Parity=0
+# [PASS] TC9:  0x80 | Sent=0x80 Captured=0x80 Parity=0
+# [PASS] TC10: 0x01 | Sent=0x01 Captured=0x01 Parity=0
+# [PASS] TC11: 0xC3 | Sent=0xc3 Captured=0xc3 Parity=1
+# [PASS] TC12: 0x3C | Sent=0x3c Captured=0x3c Parity=1
+# ======================================
+#  Results: PASS=12  FAIL=0  TOTAL=12
+# ======================================
+# ** ALL TESTS PASSED **
+# ** Note: $finish    : tb_uart_tx_directed.sv(146)
+#    Time: 1354850 ns  Iteration: 1  Instance: /tb_uart_tx_directed
+# End time: 15:02:35 on Apr 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

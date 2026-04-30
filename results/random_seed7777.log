@@ -1,0 +1,78 @@
+Reading pref.tcl
+
+# 2020.1
+
+# vsim -c -do "run -all; quit -f" "+seed=7777" tb_uart_top_random 
+# Start time: 15:02:42 on Apr 15,2026
+# Loading sv_std.std
+# Loading work.tb_uart_top_random_sv_unit
+# Loading work.tb_uart_top_random
+# Loading work.uart_top
+# Loading work.uart_tx
+# Loading work.uart_rx
+# ** Warning: (vsim-PLI-3003) [TOFD] - System task or function '$srandom' is not defined.
+#    Time: 0 ps  Iteration: 0  Region: /tb_uart_top_random/#ublk#147495101#99 File: tb_uart_top_random.sv Line: 109
+# run -all
+# ** Error (suppressible): (vsim-12023) Cannot execute undefined system task/function '$srandom'
+#    Time: 0 ps  Iteration: 0  Process: /tb_uart_top_random/#INITIAL#99(#ublk#147495101#99) File: tb_uart_top_random.sv Line: 109
+# ===========================================
+#  UART Top Random Testbench - Team 12
+#  Seed=7777  Tests=50  Log=scoreboard_seed7777.log
+# ===========================================
+# [PASS] TX=0x72 RX=0x72 rx_done=1 rx_error=0
+# [PASS] TX=0xb2 RX=0xb2 rx_done=1 rx_error=0
+# [PASS] TX=0x10 RX=0x10 rx_done=1 rx_error=0
+# [PASS] TX=0x30 RX=0x30 rx_done=1 rx_error=0
+# [PASS] TX=0xb5 RX=0xb5 rx_done=1 rx_error=0
+# [PASS] TX=0xb6 RX=0xb6 rx_done=1 rx_error=0
+# [PASS] TX=0x14 RX=0x14 rx_done=1 rx_error=0
+# [PASS] TX=0xdf RX=0xdf rx_done=1 rx_error=0
+# [PASS] TX=0xbb RX=0xbb rx_done=1 rx_error=0
+# [PASS] TX=0xeb RX=0xeb rx_done=1 rx_error=0
+# [PASS] TX=0x41 RX=0x41 rx_done=1 rx_error=0
+# [PASS] TX=0x40 RX=0x40 rx_done=1 rx_error=0
+# [PASS] TX=0x8a RX=0x8a rx_done=1 rx_error=0
+# [PASS] TX=0x03 RX=0x03 rx_done=1 rx_error=0
+# [PASS] TX=0xfc RX=0xfc rx_done=1 rx_error=0
+# [PASS] TX=0x5d RX=0x5d rx_done=1 rx_error=0
+# [PASS] TX=0x1d RX=0x1d rx_done=1 rx_error=0
+# [PASS] TX=0x6a RX=0x6a rx_done=1 rx_error=0
+# [PASS] TX=0x16 RX=0x16 rx_done=1 rx_error=0
+# [PASS] TX=0x3f RX=0x3f rx_done=1 rx_error=0
+# [PASS] TX=0x23 RX=0x23 rx_done=1 rx_error=0
+# [PASS] TX=0xa8 RX=0xa8 rx_done=1 rx_error=0
+# [PASS] TX=0x90 RX=0x90 rx_done=1 rx_error=0
+# [PASS] TX=0x25 RX=0x25 rx_done=1 rx_error=0
+# [PASS] TX=0x82 RX=0x82 rx_done=1 rx_error=0
+# [PASS] TX=0x5b RX=0x5b rx_done=1 rx_error=0
+# [PASS] TX=0xf2 RX=0xf2 rx_done=1 rx_error=0
+# [PASS] TX=0x31 RX=0x31 rx_done=1 rx_error=0
+# [PASS] TX=0xcd RX=0xcd rx_done=1 rx_error=0
+# [PASS] TX=0x64 RX=0x64 rx_done=1 rx_error=0
+# [PASS] TX=0x2b RX=0x2b rx_done=1 rx_error=0
+# [PASS] TX=0xea RX=0xea rx_done=1 rx_error=0
+# [PASS] TX=0x91 RX=0x91 rx_done=1 rx_error=0
+# [PASS] TX=0xf6 RX=0xf6 rx_done=1 rx_error=0
+# [PASS] TX=0x96 RX=0x96 rx_done=1 rx_error=0
+# [PASS] TX=0x55 RX=0x55 rx_done=1 rx_error=0
+# [PASS] TX=0x76 RX=0x76 rx_done=1 rx_error=0
+# [PASS] TX=0xb8 RX=0xb8 rx_done=1 rx_error=0
+# [PASS] TX=0x14 RX=0x14 rx_done=1 rx_error=0
+# [PASS] TX=0x81 RX=0x81 rx_done=1 rx_error=0
+# [PASS] TX=0x77 RX=0x77 rx_done=1 rx_error=0
+# [PASS] TX=0xed RX=0xed rx_done=1 rx_error=0
+# [PASS] TX=0x82 RX=0x82 rx_done=1 rx_error=0
+# [PASS] TX=0xd9 RX=0xd9 rx_done=1 rx_error=0
+# [PASS] TX=0x14 RX=0x14 rx_done=1 rx_error=0
+# [PASS] TX=0x7d RX=0x7d rx_done=1 rx_error=0
+# [PASS] TX=0x8c RX=0x8c rx_done=1 rx_error=0
+# [PASS] TX=0x4b RX=0x4b rx_done=1 rx_error=0
+# [PASS] TX=0x7c RX=0x7c rx_done=1 rx_error=0
+# [PASS] TX=0x70 RX=0x70 rx_done=1 rx_error=0
+# ======================================
+#  SCOREBOARD: PASS=50 FAIL=0 TOTAL=50
+# ======================================
+# ** Note: $finish    : tb_uart_top_random.sv(147)
+#    Time: 6947290 ns  Iteration: 1  Instance: /tb_uart_top_random
+# End time: 15:02:44 on Apr 15,2026, Elapsed time: 0:00:02
+# Errors: 1, Warnings: 1

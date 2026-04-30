@@ -1,0 +1,31 @@
+Reading pref.tcl
+
+# 2020.1
+
+# vsim -c -do "run -all; quit -f" tb_uart_rx_directed 
+# Start time: 15:02:33 on Apr 15,2026
+# Loading sv_std.std
+# Loading work.tb_uart_rx_directed
+# Loading work.uart_rx
+# run -all
+#  UART RX Directed Testbench - Team 12
+# [PASS] TC1: Data=0xA5 | rx_data=0xa5 as expected
+# [PASS] TC2: Data=0x00 | rx_data=0x00 as expected
+# [PASS] TC3: Data=0xFF | rx_data=0xff as expected
+# [PASS] TC4: Data=0x55 | rx_data=0x55 as expected
+# [PASS] TC5: Data=0xAA | rx_data=0xaa as expected
+# [PASS] TC6: Data=0x12 | rx_data=0x12 as expected
+# [PASS] TC7: Data=0xDE | rx_data=0xde as expected
+# [PASS] TC8: Data=0x7F | rx_data=0x7f as expected
+# [PASS] TC9: Data=0x80 | rx_data=0x80 as expected
+# [PASS] TC10: Data=0x01 | rx_data=0x01 as expected
+# [PASS] TC11: Parity Error Injection | rx_error asserted as expected
+# [PASS] TC12: Data=0xC3 | rx_data=0xc3 as expected
+# ======================================
+#  Results: PASS=12  FAIL=0  TOTAL=12
+# ======================================
+# ** ALL TESTS PASSED **
+# ** Note: $finish    : tb_uart_rx_directed.sv(203)
+#    Time: 1354370 ns  Iteration: 1  Instance: /tb_uart_rx_directed
+# End time: 15:02:33 on Apr 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

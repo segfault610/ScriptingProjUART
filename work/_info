@@ -1,0 +1,187 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/jonny/Desktop/CourseWork/ScriptingProjj/ScriptingProj
+vtb_uart_rx_directed
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1776245552
+!i10b 1
+!s100 Bkn@[Ale;1^L=?2;3li`f3
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IPldGKnchHXJaG8LjQX;j70
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1776158896
+8tb_uart_rx_directed.sv
+Ftb_uart_rx_directed.sv
+!i122 21
+L0 12 212
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1776245552.000000
+!s107 tb_uart_rx_directed.sv|
+!s90 -sv|tb_uart_rx_directed.sv|
+!i113 1
+o-sv
+Z7 tCvgOpt 0
+vtb_uart_top_random
+R1
+DXx4 work 26 tb_uart_top_random_sv_unit 0 22 Y6PfXXUGaD?`3P9MMTn4U1
+R2
+R4
+r1
+!s85 0
+!i10b 1
+!s100 zzBHQAWI_ESQe1>fA00>m3
+IZIH>LLm4[_hbeV@Yn8^oM0
+!s105 tb_uart_top_random_sv_unit
+S1
+R0
+Z8 w1776243811
+Z9 8tb_uart_top_random.sv
+Z10 Ftb_uart_top_random.sv
+!i122 23
+L0 59 103
+R5
+31
+R6
+!s107 tb_uart_top_random.sv|
+Z11 !s90 -sv|tb_uart_top_random.sv|
+!i113 1
+o-sv
+R7
+Xtb_uart_top_random_sv_unit
+R1
+R2
+VY6PfXXUGaD?`3P9MMTn4U1
+r1
+!s85 0
+!i10b 1
+!s100 dY04?Yj5TKbMXAXNFTJ4]3
+IY6PfXXUGaD?`3P9MMTn4U1
+!i103 1
+S1
+R0
+R8
+R9
+R10
+!i122 23
+L0 3 0
+R5
+31
+R6
+Z12 !s107 tb_uart_top_random.sv|
+R11
+!i113 1
+o-sv
+R7
+vtb_uart_tx_directed
+R1
+R2
+!i10b 1
+!s100 8OfS9DKDd2OeG]S^SNI3A0
+R3
+I[fz@bGYRK_gd^5BH_c60L1
+R4
+S1
+R0
+w1776158937
+8tb_uart_tx_directed.sv
+Ftb_uart_tx_directed.sv
+!i122 22
+L0 12 153
+R5
+r1
+!s85 0
+31
+R6
+!s107 tb_uart_tx_directed.sv|
+!s90 -sv|tb_uart_tx_directed.sv|
+!i113 1
+o-sv
+R7
+vuart_rx
+R1
+R2
+!i10b 1
+!s100 XAULjMoZzz9^g>fUVjQzV2
+R3
+I77I;db6MJg3Ok^SNfbLUi0
+R4
+S1
+R0
+w1776236588
+8uart_rx.sv
+Fuart_rx.sv
+!i122 18
+L0 1 123
+R5
+r1
+!s85 0
+31
+R6
+!s107 uart_rx.sv|
+!s90 -sv|uart_rx.sv|
+!i113 1
+o-sv
+R7
+vuart_top
+R1
+R2
+!i10b 1
+!s100 I3Kan@ROUOiMG33eI:CZ@1
+R3
+I[C2A<a=dk^LmSo[WTNRPG2
+R4
+S1
+R0
+w1775471899
+8uart_top.sv
+Fuart_top.sv
+!i122 20
+L0 11 53
+R5
+r1
+!s85 0
+31
+R6
+!s107 uart_top.sv|
+!s90 -sv|uart_top.sv|
+!i113 1
+o-sv
+R7
+vuart_tx
+R1
+R2
+!i10b 1
+!s100 hDViMm_9zbdDg9zB[zW2;0
+R3
+I`kQ`cJ_YmZMbd=F1f_GKH1
+R4
+S1
+R0
+w1776179357
+8uart_tx.sv
+Fuart_tx.sv
+!i122 19
+L0 17 125
+R5
+r1
+!s85 0
+31
+R6
+!s107 uart_tx.sv|
+!s90 -sv|uart_tx.sv|
+!i113 1
+o-sv
+R7

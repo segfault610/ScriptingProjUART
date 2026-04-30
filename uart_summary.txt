@@ -1,0 +1,21 @@
+========================================================
+ UART VERIFICATION SUMMARY REPORT - Team 12
+ Date: 2026-04-15 12:14:20
+========================================================
+
+PER-RUN BREAKDOWN:
+----------------------------------------
+  123                  : PASS=50   FAIL=0    TOTAL=50   (100.0%)
+  31415                : PASS=50   FAIL=0    TOTAL=50   (100.0%)
+  42                   : PASS=50   FAIL=0    TOTAL=50   (100.0%)
+  7777                 : PASS=50   FAIL=0    TOTAL=50   (100.0%)
+  99999                : PASS=50   FAIL=0    TOTAL=50   (100.0%)
+  directed_rx          : PASS=0    FAIL=0    TOTAL=0    (N/A)
+  directed_tx          : PASS=0    FAIL=0    TOTAL=0    (N/A)
+----------------------------------------
+  GRAND TOTAL          : PASS=250  FAIL=0    TOTAL=250 
+========================================================
+
+  ** No failures detected - All tests passed! **
+========================================================
+

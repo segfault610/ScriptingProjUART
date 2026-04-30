@@ -1,0 +1,10 @@
+================================================
+ UART VERIFICATION SUMMARY - Team 12
+================================================
+ Directed RX   : PASS=12  FAIL=0
+ Directed TX   : PASS=12  FAIL=0
+ Random (all)  : PASS=250  FAIL=0
+------------------------------------------------
+ TOTAL         : PASS=274  FAIL=0
+================================================
+** ALL TESTS PASSED - Design Verified **

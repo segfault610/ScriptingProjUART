@@ -1,0 +1,155 @@
+`timescale 1ns/1ps
+
+module tb_uart_tx_directed;
+
+    parameter CLK_FREQ  = 50_000_000;
+    parameter BAUD_RATE = 115200;
+    localparam CLKS_PER_BIT = CLK_FREQ / BAUD_RATE;
+    localparam CLK_PERIOD   = 1_000_000_000 / CLK_FREQ;
+
+    // ---- DUT signals ----
+    logic       clk;
+    logic       rst_n;
+    logic [7:0] tx_data;
+    logic       tx_start;
+    logic       tx;
+    logic       tx_busy;
+    logic       tx_done;
+
+    // ---- Scoreboard ----
+    int pass_count = 0;
+    int fail_count = 0;
+
+    // ---- DUT ----
+    uart_tx #(
+        .CLK_FREQ  (CLK_FREQ),
+        .BAUD_RATE (BAUD_RATE)
+    ) dut (
+        .clk      (clk),
+        .rst_n    (rst_n),
+        .tx_data  (tx_data),
+        .tx_start (tx_start),
+        .tx       (tx),
+        .tx_busy  (tx_busy),
+        .tx_done  (tx_done)
+    );
+
+    initial clk = 0;
+    always #(CLK_PERIOD/2) clk = ~clk;
+
+    // ---- Task: Trigger TX and capture serial stream ----
+    task automatic send_and_capture(
+        input  logic [7:0] data,
+        output logic [7:0] captured_data,
+        output logic       captured_parity
+    );
+        logic [7:0] bits;
+        int i;
+
+        tx_data  = data;
+        tx_start = 1;
+        @(posedge clk);
+        tx_start = 0;
+
+        // Wait for start bit (tx goes LOW)
+        @(negedge tx);
+
+        // Skip to middle of start bit
+        repeat(CLKS_PER_BIT / 2) @(posedge clk);
+
+        // Verify start bit
+        if (tx !== 1'b0)
+            $display("[WARN] Start bit not LOW - tx=%0b", tx);
+
+        // Sample 8 data bits
+        for (i = 0; i < 8; i++) begin
+            repeat(CLKS_PER_BIT) @(posedge clk);
+            bits[i] = tx;
+        end
+        captured_data = bits;
+
+        // Sample parity bit
+        repeat(CLKS_PER_BIT) @(posedge clk);
+        captured_parity = tx;
+
+        // Wait for tx_done
+        @(posedge clk iff tx_done);
+
+        // Idle gap
+        repeat(CLKS_PER_BIT * 2) @(posedge clk);
+    endtask
+
+    // ---- Task: Verify one TX frame ----
+    task automatic verify_tx(input logic [7:0] data, input string test_name);
+        logic [7:0] cap_data;
+        logic       cap_parity;
+        logic       expected_parity;
+
+        send_and_capture(data, cap_data, cap_parity);
+
+        expected_parity = ~^data;   // Odd parity
+
+        if (cap_data === data && cap_parity === expected_parity) begin
+            $display("[PASS] %s | Sent=0x%02X Captured=0x%02X Parity=%0b",
+                      test_name, data, cap_data, cap_parity);
+            pass_count++;
+        end else begin
+            $display("[FAIL] %s | Sent=0x%02X Cap=0x%02X ExpParity=%0b GotParity=%0b",
+                      test_name, data, cap_data, expected_parity, cap_parity);
+            fail_count++;
+        end
+    endtask
+
+    // ============================================================
+    // Main
+    // ============================================================
+    initial begin
+        rst_n    = 0;
+        tx_start = 0;
+        tx_data  = 8'h00;
+        repeat(10) @(posedge clk);
+        rst_n = 1;
+        repeat(5)  @(posedge clk);
+
+        verify_tx(8'hA5, "TC1:  0xA5");
+        verify_tx(8'h00, "TC2:  0x00");
+        verify_tx(8'hFF, "TC3:  0xFF");
+        verify_tx(8'h55, "TC4:  0x55");
+        verify_tx(8'hAA, "TC5:  0xAA");
+        verify_tx(8'h12, "TC6:  0x12");
+        verify_tx(8'hDE, "TC7:  0xDE");
+        verify_tx(8'h7F, "TC8:  0x7F");
+        verify_tx(8'h80, "TC9:  0x80");
+        verify_tx(8'h01, "TC10: 0x01");
+        verify_tx(8'hC3, "TC11: 0xC3");
+        verify_tx(8'h3C, "TC12: 0x3C");
+
+        $display("======================================");
+        $display(" Results: PASS=%0d  FAIL=%0d  TOTAL=%0d",
+                  pass_count, fail_count, pass_count + fail_count);
+        $display("======================================");
+
+        if (fail_count == 0)
+            $display("** ALL TESTS PASSED **");
+        else
+            $display("** FAILURES DETECTED - Check waveform **");
+
+        $finish;
+    end
+
+    // FIX: Original timeout (CLK_PERIOD * CLKS_PER_BIT * 300) = ~2.6 ms,
+    // which is too tight for 12 frames of 12 bit-periods each (~1.1 ms total)
+    // plus reset, idle gaps, and sampling overhead.
+    // New timeout: 20 bit-periods of margin per frame across 12 frames.
+    initial begin
+        #(CLK_PERIOD * CLKS_PER_BIT * 12 * 20);
+        $display("[TIMEOUT] Simulation exceeded limit!");
+        $finish;
+    end
+
+    initial begin
+        $dumpfile("tb_uart_tx_directed.vcd");
+        $dumpvars(0, tb_uart_tx_directed);
+    end
+
+endmodule
